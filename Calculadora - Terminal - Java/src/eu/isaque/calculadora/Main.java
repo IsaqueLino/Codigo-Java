@@ -8,21 +8,21 @@ public class Main {
         OperacaoPorcento porcento = new OperacaoPorcento(0, 0);
         OperacaoRaiz raiz = new OperacaoRaiz(0, 0);
         OperacaoPotencia pot = new OperacaoPotencia(0, 0);
-		Scanner ler = new Scanner(System.in);
+	Scanner ler = new Scanner(System.in);
         int op = 0;
         int cont = 1;
         
         do{
             System.out.println("-----------------------------Menu-----------------------------");
-            System.out.println("1 - OperaÁ„o de soma!");
-            System.out.println("2 - OperaÁ„o de subtraÁ„o!");
-            System.out.println("3 - OperaÁ„o de multiplicaÁ„o!");
-            System.out.println("4 - OperaÁ„o de divis„o!");
-            System.out.println("5 - OperaÁ„o(extra) de porcentagem!");
-            System.out.println("6 - OperaÁ„o(extra) de raiz quadrada!");
-            System.out.println("7 - OperaÁ„o(extra) de potenciaÁ„o!");
-            System.out.println("0 - Sair da OperaÁ„o!");
-            System.out.println("Escolha uma opÁ„o(0 a 7): ");
+            System.out.println("1 - Opera√ß√£o de soma!");
+            System.out.println("2 - Opera√ß√£o de subtra√ß√£o!");
+            System.out.println("3 - Opera√ß√£o de multiplica√ß√£o!");
+            System.out.println("4 - Opera√ß√£o de divis√£o!");
+            System.out.println("5 - Opera√ß√£o(extra) de porcentagem!");
+            System.out.println("6 - Opera√ß√£o(extra) de raiz quadrada!");
+            System.out.println("7 - Opera√ß√£o(extra) de potencia√ß√£o!");
+            System.out.println("0 - Sair da Opera√ß√£o!");
+            System.out.println("Escolha uma op√ß√£o(0 a 7): ");
             System.out.println("--------------------------------------------------------------");
             op = ler.nextInt();
             switch(op){
@@ -30,68 +30,68 @@ public class Main {
                     comum.ler();
                     comum.setSoma(comum.getPvalor() + comum.getSvalor());
                     System.out.println("-----------------------------Soma-----------------------------");
-                    System.out.println("A soma dos valores È: " + comum.getSoma());
+                    System.out.println("A soma dos valores √©: " + comum.getSoma());
                     System.out.println("--------------------------------------------------------------");
                     break;
                 }
                 case 2: {
-                	comum.ler();
-                	comum.setSubtracao(comum.getPvalor() - comum.getSvalor());
-                    System.out.println("-----------------------------SubtraÁ„o-----------------------------");
-                    System.out.println("A subtraÁ„o dos valores È: " + comum.getSubtracao());
+                    comum.ler();
+                    comum.setSubtracao(comum.getPvalor() - comum.getSvalor());
+                    System.out.println("-----------------------------Subtra√ß√£o-----------------------------");
+                    System.out.println("A subtra√ß√£o dos valores √©: " + comum.getSubtracao());
                     System.out.println("-------------------------------------------------------------------");
                     break;
                 }
                 case 3: {
-                	comum.ler();
-                	comum.setMultiplicar(comum.getPvalor() * comum.getSvalor());
-                    System.out.println("-----------------------------MultiplicaÁ„o-----------------------------");
-                    System.out.println("A multiplicaÁ„o dos valores È: " + comum.getMultiplicar());
+                    comum.ler();
+                    comum.setMultiplicar(comum.getPvalor() * comum.getSvalor());
+                    System.out.println("-----------------------------Multiplica√ß√£o-----------------------------");
+                    System.out.println("A multiplica√ß√£o dos valores √©: " + comum.getMultiplicar());
                     System.out.println("-----------------------------------------------------------------------");
                     break;
                 }
                 case 4: {
-                	comum.ler();
-                	comum.setDividir(comum.getPvalor() / comum.getSvalor());
+                    comum.ler();
+                    comum.setDividir(comum.getPvalor() / comum.getSvalor());
                     if(comum.getSvalor() == 0){
                         System.out.println("-----------------------------!ERRO!-----------------------------");
-                        System.out.println("N„o È possÌvel dividir por 0(Zero)!");
+                        System.out.println("N√£o √© poss√≠vel dividir por 0(Zero)!");
                         System.out.println("----------------------------------------------------------------");
                     } else {
-                        System.out.println("-----------------------------Divis„o-----------------------------");
-                        System.out.println("A divis„o dos valores È: " + comum.getDividir());
+                        System.out.println("-----------------------------Divis√£o-----------------------------");
+                        System.out.println("A divis√£o dos valores √©: " + comum.getDividir());
                         System.out.println("-----------------------------------------------------------------");
                     }
                     break;
                 }
                 case 5: {
-                	porcento.ler();
-                	porcento.setPorceto(porcento.getPvalorPor() * (porcento.getSvalorPor() / 100));
-                	System.out.println("------------------------------Porcentagem------------------------------");
-                    System.out.println(porcento.getSvalorPor() +" por cento de " + porcento.getPvalorPor() + " È: " + porcento.getPorcento());
+                    porcento.ler();
+                    porcento.setPorceto(porcento.getPvalorPor() * (porcento.getSvalorPor() / 100));
+                    System.out.println("------------------------------Porcentagem------------------------------");
+                    System.out.println(porcento.getSvalorPor() +" por cento de " + porcento.getPvalorPor() + " √©: " + porcento.getPorcento());
                     System.out.println("-----------------------------------------------------------------------");
-                	break;
+                    break;
                 }
                 case 6: {
-                	raiz.ler();
-                	raiz.setRaiz(Math.sqrt(raiz.getPvalorRaiz()));
-                	System.out.println("-----------------------------Raiz Quadrada-----------------------------");
-                    System.out.println("A raiz quadradada de " + raiz.getPvalorRaiz() + " È: " + raiz.getRaiz());
+                    raiz.ler();
+                    raiz.setRaiz(Math.sqrt(raiz.getPvalorRaiz()));
+                    System.out.println("-----------------------------Raiz Quadrada-----------------------------");
+                    System.out.println("A raiz quadradada de " + raiz.getPvalorRaiz() + " √©: " + raiz.getRaiz());
                     System.out.println("-----------------------------------------------------------------------");	
                     break;
                 }
                 case 7: {
-                	pot.ler();
-                	pot.setPotencia(1);
-                	System.out.println("------------------------------PotenciaÁ„o------------------------------");
-                    System.out.println(pot.getPvalorPot() + " elevado a " + pot.getSvalorPot() + " È: " + pot.getPotencia());
+                    pot.ler();
+                    pot.setPotencia(1);
+                    System.out.println("------------------------------Potencia√ß√£o------------------------------");
+                    System.out.println(pot.getPvalorPot() + " elevado a " + pot.getSvalorPot() + " √©: " + pot.getPotencia());
                     System.out.println("-----------------------------------------------------------------------");
-                	break;
+                    break;
                 }
                 default: {
                     if(op != 0){
-                        System.out.println("-----------------------------Inv·lido-----------------------------");
-                        System.out.println("A opÁ„o informada È inv·lida!");
+                        System.out.println("-----------------------------Inv√°lido-----------------------------");
+                        System.out.println("A op√ß√£o informada √© inv√°lida!");
                         System.out.println("------------------------------------------------------------------");
                     } else {
                         cont = 0;
